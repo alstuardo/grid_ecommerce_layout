@@ -1,0 +1,209 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+                            /* Areas config*/
+nav{grid-area: nav;
+    background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,1) 30%, rgba(138,43,226,1) 62%);
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-image: url(/assets/img/360_F_571834789_ujYbUnH190iUokdDhZq7GXeTBRgqYVwa.jpg);
+}
+menu{grid-area: menu;
+background-color: blueviolet;
+min-height: 80vh;
+background-image: url();
+}
+main{grid-area: main;
+background-color: #FFF;
+background-image: url(/assets/img/istockphoto-1320326864-640x640.jpg);
+background-size: cover ;
+}
+footer{grid-area: footer;
+    background: rgb(138,43,226);
+    background: linear-gradient(180deg, rgba(138,43,226,1) 24%, rgba(0,0,0,0.95) 62%);
+height: 7vh;
+gap: 0px;
+background-image: url(/assets/img/360_F_571834789_ujYbUnH190iUokdDhZq7GXeTBRgqYVwa.jpg);
+}
+                            /* Order of areas */
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    'nav nav nav nav nav nav'
+    'menu main main main main main'
+    'footer footer footer footer footer footer';
+    gap: 10px;
+}
+                            /*sub areas config*/
+                                /* nav */
+nav img{
+    width: 500px;
+}
+                                 /* menu */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+}
+menu h3{
+    color:#FFF;
+    font-weight: bold;
+    font-family: 'Poiret One', cursive;
+    font-size: 35px;
+    text-align: center;
+    padding-top: 20px;
+}
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    height: 40px;
+    transform: translateY(350%);
+    z-index: 1;
+    gap: 20px;
+    }
+    
+    .breadcrumb__item {
+    height: 100%;
+    background-color: white;
+    color: #252525;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 7px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    transform: skew(-21deg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    margin: 5px;
+    padding: 0 40px;
+    cursor: pointer;
+    }
+    
+    .breadcrumb__item:hover {
+    background: #490099;
+    color: #FFF;
+    }
+    
+    .breadcrumb__inner {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    z-index: 2;
+    transform: skew(21deg);  
+    }
+    
+    .breadcrumb__title {
+    font-size: 16px;
+    text-overflow: ellipsis;  
+    overflow: hidden;
+    white-space: nowrap;  
+    }
+    
+    @media all and (max-width: 1000px) {
+    .breadcrumb {
+    height: 35px;
+    }
+    
+    .breadcrumb__title{
+    font-size: 11px;
+    }
+
+    .breadcrumb__item {
+    padding: 0 30px;
+    }
+    }
+    
+    @media all and (max-width: 710px) {
+    .breadcrumb {
+    height: 30px;
+    }
+    .breadcrumb__item {
+    padding: 0 20px;
+    }
+    
+    }
+                                /* main */
+   .grid-container2{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background-color: #4a009968;
+   }       
+
+   .product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   }
+   .a{display: flex;
+    justify-content: center;}
+
+   .product img{
+    width: 225px;
+   }     
+
+   .product h4{
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+   } 
+
+   .product h5{
+    color: #FFF;
+    font-family: 'Poiret One', cursive;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: #FFF 1px 1px;
+    letter-spacing: 5px;
+   }               
+   
+   .product button{
+    height: 100%;
+    width: 60%;
+    background-color: white;
+    color: #252525;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 7px;
+    letter-spacing: 7px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    transform: skew(-21deg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    margin: 5px 0 0 0px;
+    padding: 0 40px;
+    cursor: pointer;
+   }
+                                 /* footer */
+   footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #FFF;
+    font-family: 'Poiret One', cursive;
+    font-size: 28px;
+    font-weight: bold;
+   }
+   footer a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #FFF;
+   }
